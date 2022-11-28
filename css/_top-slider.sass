@@ -1,0 +1,29 @@
+#app
+	.top-slider
+		position: relative
+		img
+			width: 100%
+			height: auto
+			vertical-align: bottom
+			border-radius: 15px
+		&__prev, &__next
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			z-index: 1
+			cursor: pointer
+			&.swiper-button-disabled
+				opacity: .4
+				cursor: not-allowed
+		&__prev
+			left: 35px
+		&__next
+			right: 35px
+		.swiper-pagination
+			.swiper-pagination-bullet
+				width: 16px !important
+				height: 16px !important
+				background-color: #ffffff
+				opacity: .5
+			.swiper-pagination-bullet-active
+				opacity: 1

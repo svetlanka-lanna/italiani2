@@ -1,0 +1,233 @@
+#app
+	.page-personal
+		padding-bottom: 100px
+		.site-map
+			display: none
+		.purchase-header
+			margin-bottom: 20px
+			.title
+				margin-bottom: 0
+				flex-wrap: wrap
+		.purchase-empty
+			p
+				margin: 0
+		.personal-header
+			display: flex
+			align-items: center
+			margin-bottom: 40px
+			flex-wrap: wrap
+			h1
+				margin: 0
+				font-weight: 600
+			&__bonus
+				background: #F40103
+				border-radius: 12px
+				font-weight: 600
+				font-size: 16px
+				line-height: 24px
+				color: #FFFFFF
+				padding: 4px 8px
+				box-sizing: border-box
+				margin-left: 30px
+		.personal-container
+			max-width: 550px
+		.title
+			margin-bottom: 20px
+			font-weight: 600
+			font-size: 20px
+			line-height: 32px
+			color: #3F394F
+		.form-checkbox
+			margin-top: 12px
+			display: block
+		.add
+			margin-top: 12px
+			font-weight: 400
+			font-size: 16px
+			line-height: 24px
+			color: #752323
+			text-decoration: none
+			cursor: pointer
+		.personal-card
+			&__inner
+				flex: auto
+				margin-bottom: 20px
+			&__item
+				display: flex
+				align-items: center
+				box-sizing: border-box
+				padding: 10px
+				border: 1px solid rgba(29, 29, 27, 0.1)
+				border-radius: 12px
+				max-width: 355px
+				justify-content: space-between
+				.block
+					display: flex
+				.text
+					font-weight: 400
+					font-size: 14px
+					line-height: 24px
+					color: #1D1D1B
+				.icon
+					margin-right: 8px
+				.change
+					font-weight: 400
+					font-size: 14px
+					line-height: 24px
+					color: #752323
+					cursor: pointer
+			.form-card
+				margin-top: 15px
+		.form-card
+			max-width: 355px
+			display: none
+			.col-6
+				padding-left: 5px
+				padding-right: 5px
+			.col-12
+				padding-left: 5px
+				padding-right: 5px
+				margin-bottom: 10px
+			.row
+				margin-left: -5px
+				margin-right: -5px
+				&:first-child
+					max-width: 320px
+			button[type=submit]
+				width: 100%
+				height: 44px
+				padding: 0
+				margin-top: 10px
+			.cancel
+				width: 100%
+				height: 44px
+				line-height: 44px
+				background: #ECECEE
+				border-radius: 12px
+				margin-top: 10px
+				text-align: center
+				font-weight: 400
+				font-size: 16px
+				color: #3F394F
+				cursor: pointer
+
+
+@media (max-width: 991px)
+	#app 
+		.form-change__input 
+			button[type=submit]
+				margin-left: 5px
+				margin-right: 15px
+			button[type=submit], .form-change__input--cancel
+				position: relative
+				margin-top: 5px
+				right: 0
+				float: left
+				transform: translateY(0)
+
+@media (max-width: 767px)
+	#app .modal-purchase
+		width: 100%
+		box-sizing: border-box
+		padding: 25px
+		top: 99px
+		left: 0
+		transform: translate(0, 0)
+		height: calc(100% - 100px)
+		overflow-y: auto
+		border-radius: 0
+		&__line
+			flex-wrap: wrap
+			align-items: inherit
+			margin-left: -25px
+			margin-right: -25px
+			padding-left: 25px
+			padding-right: 25px
+			border-bottom: 5px solid rgba(#88898C, .2)
+			&:last-child
+				padding-bottom: 20px
+				border-bottom: 5px solid rgba(#88898C, .2)
+
+			.block
+				max-width: calc(100% - 100px)
+				flex: 0 0 calc(100% - 100px)
+				padding-left: 10px
+				padding-bottom: 10px
+				border-bottom: 1px solid rgba(#88898C, .2)
+				margin-bottom: 10px
+			.images
+				margin-right: 0px
+				padding-bottom: 10px
+				border-bottom: 1px solid rgba(#88898C, .2)
+				margin-bottom: 10px
+			.qty
+				order: 1
+				max-width: 50%
+				flex: 0 0 50%
+				text-align: right
+			.price
+				text-align: left
+				max-width: 50%
+				flex: 0 0 50%
+				font-weight: 600
+				font-size: 14px
+				line-height: 24px
+		&__header
+			flex-wrap: wrap
+			margin-top: 40px
+		.modal-close
+			position: relative
+			top: 0
+			left: 0
+			svg
+				display: none
+			&:before
+				content: ''
+				background-image: url("data:image/svg+xml,%3Csvg width='62' height='24' viewBox='0 0 62 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.646446 11.6464C0.451184 11.8417 0.451184 12.1583 0.646446 12.3536L3.82843 15.5355C4.02369 15.7308 4.34027 15.7308 4.53553 15.5355C4.7308 15.3403 4.7308 15.0237 4.53553 14.8284L1.70711 12L4.53553 9.17157C4.7308 8.97631 4.7308 8.65973 4.53553 8.46447C4.34027 8.2692 4.02369 8.2692 3.82843 8.46447L0.646446 11.6464ZM13 11.5L1 11.5V12.5L13 12.5V11.5Z' fill='%23752323'/%3E%3Cpath d='M22.344 5.99H23.562V10.526H28.826V5.99H30.044V16H28.826V11.548H23.562V16H22.344V5.99ZM34.3206 16.126C33.6019 16.126 33.0139 15.9487 32.5566 15.594C32.1086 15.23 31.8846 14.6887 31.8846 13.97C31.8846 13.5687 31.9826 13.2187 32.1786 12.92C32.3839 12.612 32.6639 12.374 33.0186 12.206C33.3732 12.0287 33.7606 11.9027 34.1806 11.828C34.6006 11.744 35.0579 11.702 35.5526 11.702H36.6026V11.17C36.6026 10.582 36.4812 10.162 36.2386 9.91C35.9959 9.64867 35.5946 9.518 35.0346 9.518C34.0266 9.518 33.4666 9.95667 33.3546 10.834H32.1926C32.2672 10.05 32.5706 9.476 33.1026 9.112C33.6439 8.73867 34.3066 8.552 35.0906 8.552C36.8732 8.552 37.7646 9.42467 37.7646 11.17V16H36.6026V15.076C36.0426 15.776 35.2819 16.126 34.3206 16.126ZM34.4326 15.202C35.0672 15.202 35.5852 15.048 35.9866 14.74C36.3972 14.4227 36.6026 13.9887 36.6026 13.438V12.528H35.5946C33.8959 12.528 33.0466 13.0087 33.0466 13.97C33.0466 14.7913 33.5086 15.202 34.4326 15.202ZM44.6811 10.582C44.6811 10.946 44.5738 11.282 44.3591 11.59C44.1538 11.8887 43.8598 12.0753 43.4771 12.15C43.9531 12.234 44.3311 12.416 44.6111 12.696C44.8911 12.976 45.0311 13.3447 45.0311 13.802V13.844C45.0311 14.5253 44.7791 15.076 44.2751 15.496C43.7804 15.916 43.1038 16.126 42.2451 16.126C41.3584 16.126 40.6631 15.9207 40.1591 15.51C39.6644 15.09 39.3984 14.502 39.3611 13.746H40.4951C40.5511 14.2127 40.7098 14.5673 40.9711 14.81C41.2418 15.0433 41.6664 15.16 42.2451 15.16C43.2904 15.16 43.8131 14.7447 43.8131 13.914V13.872C43.8131 13.4613 43.6871 13.1627 43.4351 12.976C43.1924 12.7893 42.8144 12.696 42.3011 12.696H41.1951V11.772H42.1051C42.5904 11.772 42.9358 11.6833 43.1411 11.506C43.3558 11.3287 43.4631 11.0393 43.4631 10.638V10.596C43.4631 9.87733 43.0431 9.518 42.2031 9.518C41.3911 9.518 40.9058 9.90067 40.7471 10.666H39.6271C39.7111 9.92867 39.9911 9.392 40.4671 9.056C40.9524 8.72 41.5544 8.552 42.2731 8.552C42.9638 8.552 43.5378 8.72933 43.9951 9.084C44.4524 9.42933 44.6811 9.91467 44.6811 10.54V10.582ZM48.8674 16.126C48.1488 16.126 47.5608 15.9487 47.1034 15.594C46.6554 15.23 46.4314 14.6887 46.4314 13.97C46.4314 13.5687 46.5294 13.2187 46.7254 12.92C46.9308 12.612 47.2108 12.374 47.5654 12.206C47.9201 12.0287 48.3074 11.9027 48.7274 11.828C49.1474 11.744 49.6048 11.702 50.0994 11.702H51.1494V11.17C51.1494 10.582 51.0281 10.162 50.7854 9.91C50.5428 9.64867 50.1414 9.518 49.5814 9.518C48.5734 9.518 48.0134 9.95667 47.9014 10.834H46.7394C46.8141 10.05 47.1174 9.476 47.6494 9.112C48.1908 8.73867 48.8534 8.552 49.6374 8.552C51.4201 8.552 52.3114 9.42467 52.3114 11.17V16H51.1494V15.076C50.5894 15.776 49.8288 16.126 48.8674 16.126ZM48.9794 15.202C49.6141 15.202 50.1321 15.048 50.5334 14.74C50.9441 14.4227 51.1494 13.9887 51.1494 13.438V12.528H50.1414C48.4428 12.528 47.5934 13.0087 47.5934 13.97C47.5934 14.7913 48.0554 15.202 48.9794 15.202ZM55.938 13.172C55.8353 14.0307 55.6767 14.6467 55.462 15.02H58.892V9.63H56.204C56.1573 10.7687 56.0687 11.9493 55.938 13.172ZM54.482 17.778H53.544V15.02H54.062C54.3233 14.9547 54.5053 14.768 54.608 14.46C54.7107 14.1427 54.7993 13.69 54.874 13.102C54.958 12.346 55.0373 11.394 55.112 10.246C55.1493 9.73267 55.1773 9.21 55.196 8.678H60.026V15.02H61.146V17.778H60.208L60.124 16H54.566L54.482 17.778Z' fill='%23752323'/%3E%3C/svg%3E%0A")
+				width: 61px
+				height: 23px
+				background-size: cover
+				background-repeat: no-repeat
+				position: absolute
+		&__to, &__form
+			.col-8, .col-4
+				max-width: 100%
+				flex: 0 0 100%
+				margin-bottom: 10px
+@media (max-width: 450px)
+	#app
+		.form-change
+			label
+				margin-bottom: 8px
+		.page-personal
+			overflow: hidden
+			.personal-header 
+				display: block
+				margin-bottom: 20px
+				&__bonus
+					display: inline-block
+					margin-left: 50px
+					font-size: 14px
+					&::before
+						content: 'У вас '
+						position: absolute
+						left: 15px
+						font-weight: 400
+						color: $grey
+				h1
+					font-size: 20px
+					line-height: 32px
+					margin-bottom: 12px
+
+	#app .page-personal .title
+		font-size: 16px
+		line-height: 24px
+		margin-bottom: 15px
+
+	#app .modal-phone-notice
+		width: calc(100% - 50px)
+	.border-block
+		border-bottom: 5px solid #ECECEE
+		margin-left: -15px
+		margin-right: -15px
+		margin-bottom: 20px

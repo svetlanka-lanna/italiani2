@@ -1,0 +1,617 @@
+$white: #ffffff
+$black: #1D1D1B
+$accent: #F40103
+$grey: #3F394F
+$secondary: #752323
+
+body
+	margin: 0
+	padding: 0
+	overflow-x: hidden
+	font-family: 'Graphik LCG', sans-serif
+
+#app
+	[name="modal-date-order"]
+		height: 24px
+		font-weight: 400
+		font-size: 16px
+		line-height: 24px
+		color: #3F394F
+		border: 0
+		outline: none
+	.qs-datepicker-container
+		border: 1px solid rgba(29, 29, 27, 0.1)
+		z-index: 2
+		border-radius: 8px
+		font-family: "Graphik LCG", sans-serif
+	.qs-controls
+		color: #ffffff
+		background-color: #3F394F
+		padding: 5px
+	.qs-arrow.qs-left:after
+		border-right-color: #ffffff
+	.qs-arrow.qs-right:after
+		border-left-color: #fff
+	.qs-current
+		text-decoration: none
+		font-weight: 500
+	.qs-month-year
+		font-weight: 400
+	.qs-day
+		font-weight: 400
+		color: #3F394F
+	.qs-active, .qs-range-end, .qs-range-start
+		background-color: #D31717
+		color: #fff
+	.qs-square:not(.qs-empty):not(.qs-disabled):not(.qs-day):not(.qs-active):hover
+		background: rgba(#3F394F, .1)
+	.modal-menu__mobile
+		display: none
+	.page-i
+		.site-map
+			display: none
+		.container
+			padding: 0
+			text-align: center
+		img
+			width: 100%
+			height: auto
+	.recommendation
+		.title
+			margin-bottom: 25px
+			font-weight: 600
+			font-size: 20px
+			line-height: 32px
+			color: #3F394F
+	.prev-page
+		margin-bottom: 25px
+		a
+			display: flex
+			font-weight: 400
+			font-size: 16px
+			line-height: 24px
+			color: #752323
+			align-items: center
+			text-decoration: none
+			svg
+				margin-right: 10px
+				vertical-align: bottom
+	input,
+	button,
+		font-family: 'Graphik LCG', sans-serif
+	h1
+		font-style: normal
+		font-weight: 400
+		font-size: 34px
+		line-height: 56px
+		color: $black
+	h2
+		font-style: normal
+		font-weight: 400
+		font-size: 24px
+		line-height: 36px
+		color: $black
+	h3
+		font-style: normal
+		font-weight: 400
+		font-size: 20px
+		line-height: 32px
+		color: $black
+	.subtitle
+		font-style: normal
+		font-weight: 400
+		font-size: 18px
+		line-height: 28px
+		color: $black
+	p
+		font-style: normal
+		font-weight: 400
+		font-size: 16px
+		line-height: 24px
+		color: $black
+		a
+			text-decoration: none
+			color: #752323
+	.button-callback
+		background-color: #ECECEE
+		border-radius: 12px
+		padding: 10px 18px
+		color: #1D1D1B
+		font-weight: 400
+		font-size: 16px
+		line-height: 24px
+		transition: all .3s ease
+		cursor: pointer
+		&:hover
+			background-color: darken(#ECECEE, 10)
+	.social
+		&__title
+			font-weight: 400
+			font-size: 16px
+			line-height: 24px
+			margin-bottom: 10px
+		&__list
+			display: flex
+			align-items: center
+		&__item
+			text-decoration: none
+			margin-right: 20px
+			&:last-child
+				margin-right: 0
+	.overlay-menu
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: 8
+		background-color: #1D1D1B
+		opacity: 0.5
+		display: none
+	.modal-menu
+		display: none
+		width: 690px
+		max-height: 690px
+		background-color: #fff
+		z-index: 10
+		left: 0
+		top: 55px
+		position: absolute
+		border-radius: 8px
+		&__head, &__italiani
+			display: none
+		.subtitle
+			font-style: normal
+			font-weight: 600
+			font-size: 18px
+			line-height: 28px
+			margin-bottom: 10px
+		.button-callback
+			display: inline-block
+			margin-bottom: 15px
+			margin-top: 30px
+		&__container
+			padding: 50px 40px
+		ul
+			padding: 0
+			margin: 0
+			li
+				list-style-type: none
+				margin-bottom: 10px
+				a
+					font-weight: 400
+					color: #3F394F
+					font-size: 16px
+					line-height: 24px
+					transition: all .3s ease
+					text-decoration: none
+					&:hover
+						color: #D31717
+		&__left
+			border-right: 1px solid #ECEBED
+		&__right
+			padding-left: 30px
+	.site
+		&-header
+			padding-top: 10px
+			padding-bottom: 10px
+			background-color: #fff
+			box-shadow: 0px 2px 10px rgba(28, 24, 25, 0.1)
+			position: fixed
+			width: 100%
+			top: 0
+			z-index: 9
+			&__wrap
+				display: flex
+				align-items: center
+				justify-content: space-between
+		&-humburger
+			width: 44px
+			height: 44px
+			border: 1px solid rgba(29, 29, 27, 0.1)
+			box-sizing: border-box
+			border-radius: 8px
+			display: flex
+			align-items: center
+			justify-content: center
+			position: relative
+			user-select: none
+			&.active
+				border-color: #1D1D1B
+			&__button
+				width: 20px
+				height: 15px
+				position: relative
+				-webkit-transform: rotate(0deg)
+				-moz-transform: rotate(0deg)
+				-o-transform: rotate(0deg)
+				transform: rotate(0deg)
+				-webkit-transition: .5s ease-in-out
+				-moz-transition: .5s ease-in-out
+				-o-transition: .5s ease-in-out
+				transition: .5s ease-in-out
+				cursor: pointer
+				span
+					display: block
+					position: absolute
+					height: 2px
+					width: 100%
+					background: #8C8895
+					border-radius: 3px
+					opacity: 1
+					left: 0
+					-webkit-transform: rotate(0deg)
+					-moz-transform: rotate(0deg)
+					-o-transform: rotate(0deg)
+					transform: rotate(0deg)
+					-webkit-transition: .25s ease-in-out
+					-moz-transition: .25s ease-in-out
+					-o-transition: .25s ease-in-out
+					transition: .25s ease-in-out
+					&:nth-child(1)
+						top: 0
+					&:nth-child(2),
+					&:nth-child(3)
+						top: 5.5px
+					&:nth-child(4)
+						top: 11px
+				&.open
+					span
+						background-color: #1D1D1B
+						&:nth-child(1)
+							top: 18px
+							width: 0%
+							left: 50%
+						&:nth-child(2)
+							-webkit-transform: rotate(45deg)
+							-moz-transform: rotate(45deg)
+							-o-transform: rotate(45deg)
+							transform: rotate(45deg)
+						&:nth-child(3)
+							-webkit-transform: rotate(-45deg)
+							-moz-transform: rotate(-45deg)
+							-o-transform: rotate(-45deg)
+							transform: rotate(-45deg)
+						&:nth-child(4)
+							top: 18px
+							width: 0%
+							left: 50%
+		&-map
+			margin-right: 50px
+			&__open-address
+				font-weight: 400
+				font-size: 14px
+				line-height: 22px
+				color: #752323
+				cursor: pointer
+			&__wrap
+				display: flex
+				align-items: center
+			&__icon
+				margin-right: 10px
+			&__city, &__address
+				font-weight: 400
+				font-size: 14px
+				line-height: 22px
+			&__address
+				color: #752323
+			&__city
+				color: $grey
+			&__delivery
+				font-weight: 400
+				font-size: 11px
+				line-height: 20px
+				color: $grey
+		&-login
+			margin-right: 15px
+			&__button
+				padding: 10px 8px
+				font-weight: 400
+				font-size: 16px
+				line-height: 24px
+				color: $grey
+				background-color: #ECECEE
+				border-radius: 12px
+				cursor: pointer
+				transition: all .3s ease
+				&:hover, &:active, &:focus
+					background-color: darken(#ECECEE, 10%)
+		&-cart
+			&__button
+				padding: 10px 18px
+				background: #3F394F
+				border-radius: 12px
+				display: flex
+				align-items: center
+				cursor: pointer
+				position: relative
+				transition: all .3s ease
+				&:hover
+					background-color: darken(#3F394F, 5%)
+				&::after
+					content: ""
+					width: 16px
+					height: 16px
+					position: absolute
+					background-color: $accent
+					border-radius: 100%
+					right: -5px
+					top: -5px
+			&__icon
+				margin-right: 9px
+			&__number
+				font-weight: 400
+				font-size: 16px
+				line-height: 24px
+				color: #ffffff
+		&-search
+			flex: auto
+			margin-left: 20px
+			margin-right: 30px
+			&__form
+				position: relative
+				button
+					position: absolute
+					left: 12px
+					top: 50%
+					transform: translateY(-50%)
+					cursor: pointer
+					background-color: transparent !important
+					border: 0
+					padding: 0 !important
+					margin: 0
+				input
+					width: 100%
+					border: 1px solid rgba(29, 29, 27, 0.1)
+					border-radius: 12px
+					height: 44px
+					padding-left: 40px
+					padding-right: 40px
+					box-sizing: border-box
+		&-logo
+			margin-right: 25px
+
+.switch
+	display: inline-block
+	height: 34px
+	position: relative
+	width: 60px
+	input
+		display: none
+
+.switch
+	.slider
+		background-color: #EAEAEA
+		bottom: 0
+		cursor: pointer
+		left: 0
+		position: absolute
+		right: 0
+		top: 0
+		transition: .4s
+		border: 1px solid #D7D7D9
+		width: 36px
+		height: 20px
+		&:before
+			background-color: #fff
+			bottom: 2px
+			content: ""
+			height: 16px
+			left: 2px
+			position: absolute
+			transition: .4s
+			width: 16px
+
+.switch
+	input:checked + .slider
+		background-color: #3F394F
+		border-color: #3C364A
+		&:before
+			transform: translateX(15px)
+
+.switch
+	.slider.round
+		border-radius: 34px
+		&:before
+			border-radius: 50%
+
+
+
+//qty
+#app
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button
+		-webkit-appearance: none
+		margin: 0
+	input[type=number]
+		-moz-appearance:textfield
+	.qty-input
+		display: flex
+		align-items: center
+		width: 114px
+		-webkit-user-select: none
+		-moz-user-select: none
+		-ms-user-select: none
+		user-select: none
+		text-align: center
+		input
+			border: 0
+			text-align: center
+			-webkit-user-select: none
+			-moz-user-select: none
+			-ms-user-select: none
+			user-select: none
+			outline: 0
+			box-shadow: 0 0 0 0 transparent
+			box-sizing: border-box
+			font-weight: 400
+			font-size: 16px
+			line-height: 24px
+			color: #3F394F
+			flex: 0 0 42px
+			height: 32px
+			padding: 0
+			max-width: 42px
+		button
+			flex: 0 0 32px
+			max-width: 32px
+			min-width: 32px
+			width: 32px
+			height: 32px
+			border-radius: 100%
+			background-color: #3F394F
+			font-size: 0
+			border: 0
+			cursor: pointer
+			transition: all .3s ease
+			position: relative
+			padding: 0
+			margin: 0
+			svg
+				path
+					stroke: #ffffff
+			&:disabled
+				background-color: #ECECEE
+				svg
+					path
+						stroke: #3F394F
+
+#app
+	.map
+		filter: grayscale(1)
+		iframe
+			border-radius: 50px
+
+//tabs
+#app
+	.tab_item
+		display: none
+	.tab_item:first-child
+		display: block
+	.tabs
+		background: #ECECEE
+		border-radius: 12px
+		display: inline-flex
+		max-width: 100%
+		.tab
+			padding-left: 70px
+			padding-right: 70px
+			padding-top: 10px
+			padding-bottom: 10px
+			font-weight: 400
+			font-size: 16px
+			line-height: 24px
+			color: #3F394F
+			cursor: pointer
+			display: block
+			input
+				display: none
+			&.active
+				background: #3F394F
+				border-radius: 12px
+				color: #fff
+
+//time-delivery
+
+#app
+	.time-delivery
+		display: flex
+		align-items: center
+		justify-content: space-between
+		box-sizing: border-box
+		padding: 10px 12px
+		border: 1px solid rgba(29, 29, 27, 0.1)
+		border-radius: 12px
+		cursor: pointer
+		&__checked
+			font-weight: 400
+			font-size: 14px
+			line-height: 24px
+			color: #3F394F
+		&__change
+			font-weight: 400
+			font-size: 14px
+			line-height: 24px
+			color: #752323
+	.new-address
+		font-weight: 400
+		font-size: 16px
+		line-height: 24px
+		color: #752323
+		cursor: pointer
+	.old-address
+		cursor: pointer
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin-bottom: 8px
+		.text
+			font-weight: 400
+			font-size: 16px
+			line-height: 24px
+			color: #3F394F
+			margin-right: 15px
+		.change
+			font-weight: 400
+			font-size: 14px
+			line-height: 24px
+			color: #752323
+
+#app
+	.img-responsive
+		width: 100%
+		height: auto
+	.site-cookie
+		position: fixed
+		z-index: 3
+		bottom: 10px
+		left: 50%
+		transform: translateX(-50%)
+		.icon
+			cursor: pointer
+			svg
+				vertical-align: bottom
+				path
+					fill: #fff
+		p
+			font-size: 12px
+			line-height: 16px
+			color: #fff
+			margin-right: 10px
+			margin-top: 0
+			margin-bottom: 0
+			white-space: nowrap
+			a
+				color: #D31717
+		&__container
+			background-color: #3F394F
+			border-radius: 12px
+			padding: 10px
+
+@import "_search-form.sass"
+@import "_modals.sass"
+@import "_forms.sass"
+@import "_buttons.sass"
+@import "_mask-code-sms.sass"
+@import "_notifications.sass"
+@import "_site-main.sass"
+@import "_top-slider.sass"
+@import "_top-services.sass"
+@import "_vantage.sass"
+@import "_menu.sass"
+@import "_footer.sass"
+@import "_page404.sass"
+@import "_delivery.sass"
+@import "_loyalty.sass"
+@import "_franchise.sass"
+@import "_aktsii.sass"
+@import "_cart.sass"
+@import "_select.sass"
+@import "_single.sass"
+@import "_order.sass"
+@import "_purchase.sass"
+@import "_lk.sass"
+@import "_cart-modals.sass"
+@import "_modal-overlay.sass"
+@import "_modifiers-modal.sass"
+@import "_media.sass"

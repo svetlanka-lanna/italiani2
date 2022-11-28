@@ -1,0 +1,102 @@
+#app
+	.page-loyalty-program
+		.site-map
+			display: none
+		h1
+			font-weight: 600
+			font-size: 34px
+			line-height: 56px
+			color: #3F394F
+		.list
+			padding-left: 15px
+			li
+				font-weight: 400
+				font-size: 16px
+				line-height: 24px
+				color: #3F394F
+				.note
+					font-weight: 400
+					font-size: 14px
+					line-height: 22px
+					color: #8C8895
+		.list-num
+			padding-left: 0
+			li
+				list-style-type: none
+	.loyalty-program-left
+		padding-bottom: 75px
+		a
+			font-weight: 400
+			font-size: 18px
+			line-height: 28px
+			color: #752323
+			text-decoration: none
+	.loyalty-program-text
+		max-width: 450px
+		.hidden
+			display: none
+			padding-top: 25px
+			.title
+				font-weight: 600
+				font-size: 16px
+				line-height: 22px
+				color: #3F394F
+			p
+				font-weight: 400
+				font-size: 16px
+				line-height: 24px
+				color: #3F394F
+		.toggle
+			position: relative
+			font-weight: 400
+			font-size: 16px
+			line-height: 22px
+			color: #752323
+			cursor: pointer
+			&:after
+				content: ""
+				position: absolute
+				width: 24px
+				height: 24px
+				transition: all .3s ease
+				background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M5 8.73294L11.6635 16H12.3365L19 8.73294L18.326 8L11.9995 14.8996L5.67206 8L5 8.73294Z' fill='%23752323'/%3E%3C/svg%3E%0A")
+			&.active
+				&:after
+					content: ""
+					transform: rotate(180deg)
+	.loyalty-program-block
+		padding: 25px
+		background: #ECECEE
+		border-radius: 12px
+		max-width: 450px
+		.title
+			font-weight: 600
+			font-size: 18px
+			line-height: 28px
+			color: #3F394F
+		.list
+			padding-left: 15px
+			margin-top: 10px
+			li
+				font-weight: 400
+				font-size: 14px
+				line-height: 22px
+				color: #3F394F
+		.link
+			background: #F40103
+			border-radius: 12px
+			font-weight: 600
+			font-size: 18px
+			text-align: center
+			text-decoration: none
+			line-height: 44px
+			color: #FFFFFF
+			display: block
+			height: 44px
+			transition: all .3s ease
+			&:hover
+				background-color: darken(#F40103, 5%)
+
+@media (max-width: 992px)
+	.loyalty-program-right
+		display: none

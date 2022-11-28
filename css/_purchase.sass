@@ -1,0 +1,232 @@
+#app
+	.purchase-item__main-mobile
+		display: none
+	.modal-purchase
+		width: 690px
+		display: none
+		&__header
+			display: flex
+			align-items: center
+			margin-bottom: 25px
+		&__link
+			padding: 10px 14px
+			background-color: #ECECEE
+			border-radius: 12px
+			font-weight: 400
+			font-size: 16px
+			line-height: 24px
+			color: #3F394F
+			transition: all .3s ease
+			text-decoration: none
+			&:hover
+				background-color: #3F394F
+				color: #fff
+		&__line
+			display: flex
+			align-items: center
+			justify-content: space-between
+			padding-bottom: 20px
+			margin-bottom: 15px
+			border-bottom: 1px solid #E8E8E8
+			&:last-child
+				padding-bottom: 0
+				border-bottom: 0 solid #000
+			.images
+				flex: 0 0 90px
+				max-width: 90px
+				margin-right: 25px
+				img
+					width: 90px
+					height: 72px
+					object-fit: cover
+					border-radius: 12px
+			.block
+				flex: 0 0 calc(60% - 115px)
+				max-width: calc(60% - 115px)
+			.qty
+				flex: 0 0 20%
+				max-width: 20%
+				text-align: center
+			.price
+				flex: 0 0 20%
+				max-width: 20%
+				text-align: right
+		&__id
+			font-weight: 600
+			font-size: 20px
+			line-height: 32px
+			color: #3F394F
+			margin-right: 25px
+		&__date
+			font-weight: 400
+			font-size: 16px
+			line-height: 24px
+			color: #3F394F
+			margin-right: 20px
+		&__to
+			display: flex
+			flex-wrap: wrap
+			align-items: center
+			justify-content: space-between
+			margin-bottom: 15px
+			.col-4
+				text-align: right
+		&__form
+			margin-bottom: 25px
+		&__status
+			background: #3F394F
+			border-radius: 12px
+			padding: 4px 8px
+			font-weight: 400
+			font-size: 16px
+			line-height: 24px
+			color: #FFFFFF
+			display: inline-block
+			&.green
+				background: #14BB7F
+			&.red
+				background-color: #F40103
+		.block
+			.title
+				margin-bottom: 0
+				font-weight: 600
+				font-size: 16px
+				line-height: 24px
+				color: #3F394F
+			.text
+				font-weight: 400
+				font-size: 16px
+				line-height: 24px
+				color: #3F394F
+				max-width: 280px
+		&__footer
+			margin-top: 20px
+			.total
+				margin-bottom: 8px
+				*
+					margin-bottom: 0
+					font-weight: 600
+					font-size: 16px
+					line-height: 24px
+					color: #3F394F
+			.pay *, .bals *
+				font-weight: 400
+				font-size: 16px
+				line-height: 24px
+				color: #3F394F
+				margin-bottom: 0
+			.pay
+				margin-bottom: 8px
+				.price
+					color: #F40103
+			.bals
+				.price
+					color: #0ACE82
+
+	.page-purchase
+		padding-bottom: 100px
+		.site-map
+			display: none
+	.purchase-item
+		background: #FFFFFF
+		box-shadow: 0px 2px 10px rgba(28, 24, 25, 0.1)
+		border-radius: 16px
+		margin-bottom: 25px
+		&__delivery
+			font-weight: 400
+			font-size: 14px
+			line-height: 24px
+			color: #3F394F
+			margin-bottom: 10px
+		&__address
+			font-weight: 400
+			font-size: 16px
+			line-height: 24px
+			color: #3F394F
+			padding-bottom: 15px
+			border-bottom: 1px solid #ECEBED
+		&__header
+			padding: 15px
+			padding-bottom: 0
+		&__main
+			padding: 15px
+			padding-bottom: 0
+		&__footer
+			padding: 15px
+			padding-top: 0
+			.d-flex
+				border-top: 1px solid #ECEBED
+				padding-top: 15px
+		&__sum
+			font-weight: 400
+			font-size: 14px
+			line-height: 24px
+			color: #3F394F
+		&__price
+			font-weight: 400
+			font-size: 16px
+			line-height: 24px
+			color: #3F394F
+		&__btn
+			text-decoration: none
+			cursor: pointer
+			padding: 10px 0
+			width: 165px
+			background: #ECECEE
+			border-radius: 12px
+			display: block
+			text-align: center
+			color: #1D1D1B
+			margin: auto
+			margin-top: 15px
+			transition: all .3s ease
+			&:hover
+				background-color: $grey
+				color: #fff
+		&__id
+			font-weight: 400
+			font-size: 16px
+			line-height: 24px
+			color: #3F394F
+		&__date
+			font-weight: 600
+			font-size: 16px
+			line-height: 24px
+			color: #3F394F
+		&__status
+			background: #3F394F
+			border-radius: 12px
+			padding: 4px 8px
+			font-weight: 400
+			font-size: 16px
+			line-height: 24px
+			color: #FFFFFF
+			display: inline-block
+			&.green
+				background: #14BB7F
+			&.red
+				background-color: #F40103
+		&__gallery
+			display: flex
+			overflow-x: auto
+			overflow-y: hidden
+			-ms-overflow-style: none
+			margin-right: -15px
+			margin-left: -15px
+			scrollbar-width: none
+			padding-bottom: 15px
+			transition: all .3s ease
+			padding-left: 15px
+			padding-top: 15px
+			&:hover
+				background-color: #ECEBED
+			&::-webkit-scrollbar
+				width: 0
+				height: 0
+			&-item
+				margin-right: 12px
+				img
+					border-radius: 12px
+					height: 92px
+					width: 92px
+					object-fit: cover

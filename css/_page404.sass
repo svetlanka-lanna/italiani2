@@ -1,0 +1,42 @@
+#app
+	.page-404
+		&__container
+			min-height: calc(100vh - 100px)
+			display: flex
+			align-items: center
+			justify-content: center
+			text-align: center
+			margin: 40px 0
+			h1
+				font-weight: 300
+				font-size: 48px
+				line-height: 48px
+				color: #3F394F
+				margin-top: 20px
+				margin-bottom: 60px
+			img
+				vertical-align: bottom
+				max-width: 100%
+				height: auto
+			a
+				text-decoration: none
+				width: 100%
+				max-width: 360px
+				display: block
+				margin: auto
+				box-sizing: border-box
+
+@media (max-width: 530px)
+	#app
+		.page-404
+			&__container
+				h1
+					font-weight: 300
+					font-size: 28px
+					line-height: 28px
+					margin-top: 10px
+					margin-bottom: 40px
+				a
+					max-width: 280px
+				img
+					max-width: 280px

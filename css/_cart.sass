@@ -1,0 +1,276 @@
+#app
+	.modal-clearcart
+		width: 425px
+		box-sizing: border-box
+		display: none
+		padding: 25px
+		p
+			font-size: 14px
+		&__inner
+			display: flex
+			align-items: center
+			justify-content: center
+		.btn
+			border-radius: 12px
+			width: 120px
+			height: 44px
+			font-weight: 400
+			font-size: 16px
+			line-height: 44px
+			text-align: center
+			cursor: pointer
+			user-select: none
+			margin: 0 8px
+			text-decoration: none
+			&.success
+				background-color: #3F394F
+				color: #FFFFFF
+			&.close
+				background-color: #ECECEE
+				color: #3F394F
+	.page-cart
+		padding-bottom: 100px
+		.site-map
+			display: none
+		.empty-cart
+			margin-top: 25px
+			margin-bottom: 35px
+			.subtitle
+				font-weight: 600
+				font-size: 24px
+				line-height: 36px
+				color: #3F394F
+			p
+				font-weight: 400
+				font-size: 16px
+				line-height: 24px
+				color: #3F394F
+		.devices
+			margin-bottom: 70px
+			.title
+				font-weight: 600
+				font-size: 18px
+				line-height: 28px
+				color: #3F394F
+				margin-bottom: 25px
+			.subtitle
+				font-weight: 400
+				font-size: 16px
+				line-height: 24px
+				color: #3F394F
+			.item
+				display: flex
+				align-items: center
+				justify-content: space-between
+				flex-wrap: wrap
+				max-width: 450px
+		.page-header
+			display: flex
+			align-items: center
+			flex-wrap: wrap
+			justify-content: space-between
+			h1
+				font-weight: 600
+				font-size: 34px
+				line-height: 56px
+				color: #3F394F
+		.delete-all-cart
+			font-weight: 400
+			font-size: 16px
+			line-height: 24px
+			color: rgba(#3F394F, .6)
+			cursor: pointer
+			transition: all .3s ease
+			&:hover
+				color: rgba(#3F394F, 1)
+		.total
+			text-align: right
+			.price
+				margin-bottom: 30px
+				font-weight: 600
+				font-size: 24px
+				line-height: 36px
+				color: #3F394F
+				span
+					display: none
+			.text
+				font-weight: 400
+				font-size: 14px
+				line-height: 22px
+				color: #3F394F
+		.d-flex
+			button
+				margin-top: 30px
+		.coupon
+			max-width: 385px
+			position: relative
+			input
+				width: 100%
+			button
+				position: absolute
+				right: 0
+				top: 0
+				width: 125px
+				padding-left: 0
+				padding-right: 0
+				text-align: center
+			.notice
+				font-weight: 400
+				font-size: 14px
+				line-height: 24px
+				color: #3F394F
+				margin-top: 3px
+			.inner
+				display: flex
+				position: relative
+			.title
+				font-weight: 600
+				font-size: 24px
+				line-height: 36px
+				color: #3F394F
+				margin-bottom: 30px
+		table.cart
+			width: 100%
+			border-collapse: collapse
+			margin-bottom: 65px
+			tr
+				vertical-align: top
+				> td
+					border-bottom: 1px solid rgba(#1D1D1B, .1)
+				&:last-child
+					> td
+						border-bottom: 0 solid #000
+			.remove
+				padding-top: 40px
+				img
+					cursor: pointer
+			.block
+				padding-left: 25px
+				padding-top: 30px
+				span
+					display: block
+				.title
+					font-weight: 400
+					font-size: 16px
+					line-height: 24px
+					color: #3F394F
+				.text
+					font-weight: 400
+					font-size: 16px
+					line-height: 24px
+					color: rgba(#3F394F, .6)
+			.qty
+				padding-top: 40px
+			.price
+				padding-top: 45px
+				color: #3F394F
+				font-weight: 400
+				font-size: 16px
+				line-height: 24px
+				text-align: center
+			.image
+				width: 165px
+				padding-bottom: 30px
+				padding-top: 30px
+				img
+					width: 100%
+					height: auto
+					border-radius: 12px
+					max-width: 165px
+			.not-active
+				.image
+					img
+						opacity: .35
+
+@media (max-width: 767px)
+	#app .modal-clearcart
+		width: calc(100% - 50px)
+	#app
+		.page-header
+			margin-bottom: 20px
+			h1
+				margin: 0
+				font-size: 20px
+				line-height: 32px
+		.page-cart
+			overflow: hidden
+			.devices
+				margin-bottom: 20px
+			.coupon
+				.title
+					display: none
+			.total
+				background: rgba(236, 236, 238, 0.4)
+				border-radius: 8px
+				padding: 10px 15px
+				text-align: left
+				margin-top: 15px
+				.price
+					margin-bottom: 10px
+					font-weight: 600
+					font-size: 14px
+					line-height: 24px
+					display: flex
+					align-items: center
+					justify-content: space-between
+					flex-wrap: wrap
+					span
+						display: block
+						font-weight: 400
+						font-size: 14px
+						line-height: 24px
+			.d-flex
+				button
+					width: 100%
+					margin-top: 15px
+					padding-left: 10px
+					padding-right: 10px
+					text-align: center
+			table.cart
+				display: flex
+				flex-wrap: wrap
+				margin-bottom: 20px
+				tr
+					display: flex
+					flex: 0 0 100%
+					max-width: 100%
+					flex-wrap: wrap
+					position: relative
+					border-bottom: 5px solid #ECECEE
+					margin-bottom: 15px
+					margin-left: -10px
+					margin-right: -10px
+					padding-left: 10px
+					padding-right: 10px
+					.image
+						flex: 0 0 90px
+						padding-top: 0
+						max-width: 90px
+						padding-bottom: 10px
+					.block
+						box-sizing: border-box
+						padding-left: 10px
+						padding-top: 0
+						flex: 0 0 calc(100% - 100px)
+						max-width: calc(100% - 100px)
+						padding-bottom: 10px
+					.qty, .price
+						flex: 0 0 50%
+						max-width: 50%
+						box-sizing: border-box
+						padding: 15px 0 20px
+						border-bottom: 0 solid #000
+					.qty
+						order: 2
+						.qty-input
+							margin-left: auto
+					.price
+						order: 1
+						font-weight: 600
+						text-align: left
+					.remove
+						position: absolute
+						right: 0
+						top: 0
+						padding-top: 0
+						border-bottom: 0 solid #000

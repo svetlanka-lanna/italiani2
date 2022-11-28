@@ -1,0 +1,189 @@
+#app
+	.form-change
+		margin-bottom: 25px
+		&__input
+			position: relative
+			.icon
+				display: flex
+				align-items: center
+			input
+				padding-right: 100px
+			&--change, button[type=submit], &--cancel, .icon
+				position: absolute
+				right: 10px
+				top: 50%
+				transform: translateY(-50%)
+				font-weight: 400
+				font-size: 14px
+				line-height: 24px
+				color: #752323
+				cursor: pointer
+			button[type=submit]
+				background: transparent
+				padding: 0
+				display: none
+			&--cancel
+				right: -155px
+				display: none
+	.form-checkbox
+		font-weight: 400
+		font-size: 16px
+		line-height: 24px
+		color: #3F394F
+		position: relative
+		padding-left: 30px
+		cursor: pointer
+		&::before
+			content: ''
+			width: 18px
+			height: 18px
+			box-sizing: border-box
+			border: 1px solid #3F394F
+			border-radius: 3px
+			position: absolute
+			left: 0
+			top: 2px
+		input
+			display: none
+		&.active
+			&::before
+				content: ''
+				background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 0C0.895431 0 0 0.895431 0 2V14C0 15.1046 0.895431 16 2 16H14C15.1046 16 16 15.1046 16 14V2C16 0.895431 15.1046 0 14 0H2ZM12.0303 4.96967C12.3196 5.25897 12.3232 5.72582 12.041 6.01947L8.04876 11.0097C8.043 11.0169 8.03685 11.0238 8.03032 11.0303C7.73743 11.3232 7.26256 11.3232 6.96966 11.0303L4.32322 8.38388C4.03032 8.09099 4.03032 7.61612 4.32322 7.32322C4.61611 7.03033 5.09098 7.03033 5.38388 7.32322L7.4774 9.41674L10.9498 4.9921C10.9559 4.98424 10.9626 4.97674 10.9697 4.96967C11.2626 4.67678 11.7374 4.67678 12.0303 4.96967Z' fill='%233F394F'/%3E%3C/svg%3E%0A")
+				background-size: cover
+				background-position: center center
+				background-repeat: no-repeat
+
+	.card-form
+		margin-left: 28px
+		max-width: 320px
+		margin-top: 15px
+		margin-bottom: 15px
+		.row
+			margin-top: 10px
+			margin-left: -5px
+			margin-right: -5px
+			.col-6
+				padding-left: 5px
+				padding-right: 5px
+	.form-radio
+		user-select: none
+		margin-bottom: 12px
+		[type="radio"]:checked,
+		[type="radio"]:not(:checked) 
+			position: absolute
+			left: -9999px
+
+		[type="radio"]:checked + label,
+		[type="radio"]:not(:checked) + label
+			position: relative
+			padding-left: 28px
+			cursor: pointer
+			line-height: 20px
+			display: inline-block
+			color: #3F394F
+		[type="radio"]:checked + label:before,
+		[type="radio"]:not(:checked) + label:before 
+			content: ''
+			position: absolute
+			left: 0
+			top: 0
+			width: 18px
+			height: 18px
+			border: 1px solid #3F394F
+			border-radius: 100%
+			background: transparent
+
+		[type="radio"]:checked + label:after,
+		[type="radio"]:not(:checked) + label:after 
+			content: ''
+			width: 14px
+			height: 14px
+			background: #3F394F
+			position: absolute
+			top: 3px
+			left: 3px
+			border-radius: 100%
+			-webkit-transition: all 0.2s ease
+			transition: all 0.2s ease
+
+		[type="radio"]:not(:checked) + label:after 
+			opacity: 0
+			-webkit-transform: scale(0)
+			transform: scale(0)
+
+		[type="radio"]:checked + label:after 
+			opacity: 1
+			-webkit-transform: scale(1)
+			transform: scale(1)
+	label
+		font-weight: 400
+		font-size: 16px
+		line-height: 24px
+		color: #3F394F
+	.form-line
+		margin-bottom: 30px
+	.form-control
+		width: 100%
+		padding: 10px 12px
+		color: #3F394F
+		outline: 0
+		box-sizing: border-box
+		border: 1px solid rgba(29, 29, 27, 0.1)
+		border-radius: 12px
+		font-weight: 400
+		font-size: 14px
+		line-height: 24px
+		font-family: 'Graphik LCG', sans-serif
+		&::placeholder
+			color: rgba($grey, .6)
+		&:focus
+			border: 1px solid $grey
+	textarea.form-control
+		resize: none
+		height: 90px
+		width: 100%
+	form
+		button[type=submit]
+			color: rgba(#1D1D1B, .6)
+			padding: 14px 63px
+			outline: none
+			cursor: pointer
+			border-radius: 12px
+			font-size: 16px
+			border: 0
+			font-family: 'Graphik LCG', sans-serif
+			background: #3F394F
+			color: #fff
+			&:disabled
+				background: #ECECEE
+				color: rgba(#1D1D1B, .6)
+				cursor: not-allowed
+				pointer-events: all !important
+	.modal-address__notice
+		&-default
+			font-weight: 400
+			font-size: 13px
+			line-height: 20px
+			color: $grey
+			margin-top: 5px
+			span
+				color: #752323
+				cursor: pointer
+		&-success
+			font-weight: 400
+			font-size: 13px
+			line-height: 18px
+			color: #079860
+			margin-bottom: 10px
+		&-error
+			font-weight: 400
+			font-size: 14px
+			line-height: 20px
+			color: $accent
+			margin-bottom: 10px
+			a
+				text-decoration: none
+				font-weight: 600
+				font-size: 14px
+				line-height: 20px
+				color: $accent

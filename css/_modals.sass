@@ -1,0 +1,132 @@
+#app
+	.modal
+		position: fixed
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		background: #FFFFFF
+		border-radius: 8px
+		padding: 25px 40px
+		z-index: 11
+		&-address
+			width: 1055px
+			form
+				.row
+					margin-bottom: 10px
+					> *
+						padding-left: 5px
+						padding-right: 5px
+		.title
+			font-weight: 600
+			font-size: 20px
+			line-height: 32px
+			color: $grey
+			margin: 0
+			padding: 0
+			margin-bottom: 15px
+		&-close
+			cursor: pointer
+			position: absolute
+			right: 25px
+			top: 25px
+
+	.overlay
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background-color: rgba(#1D1D1B, .5)
+		z-index: 10
+		display: none
+
+#app
+	.modal-address
+		display: none
+		&__right
+			padding-left: 30px
+			padding-top: 40px
+		&--pickup
+			.pickup
+				.item
+					display: flex
+					justify-content: space-between
+					box-sizing: border-box
+					padding: 15px
+					align-items: center
+					margin-bottom: 15px
+					box-shadow: 0px 2px 10px rgba(28, 24, 25, 0.1)
+					border-radius: 12px
+					cursor: pointer
+					.title
+						font-weight: 400
+						font-size: 16px
+						line-height: 24px
+						color: #3F394F
+						margin-bottom: 0
+					.time
+						font-weight: 400
+						font-size: 14px
+						line-height: 24px
+						color: rgba(#3F394F, .6)
+					.icon
+						opacity: 0
+					&.active
+						border: 1px solid #3F394F
+						.icon
+							opacity: 1
+
+
+#app
+	.modal-login
+		width: 415px
+		display: none
+		.policy
+			p
+				text-align: center
+				font-size: 12px
+				line-height: 14px
+		form
+			button
+				width: 100%
+				margin-top: 15px
+				text-align: center
+		&__form
+			&-step
+				&-1
+					display: none
+		.modal-login__change-phone-item
+			font-weight: 600
+			font-size: 14px
+			line-height: 24px
+			color: #3F394F
+		.modal-login__change-phone
+			display: flex
+		.modal-login__change-phone-btn
+			cursor: pointer
+			font-weight: 400
+			font-size: 14px
+			line-height: 24px
+			color: #752323
+			margin-left: 10px
+
+#app
+	.modal-phone-notice
+		width: 425px
+		padding: 25px
+		box-sizing: border-box
+		display: none
+		.btn
+			border-radius: 12px
+			width: 120px
+			height: 44px
+			font-weight: 400
+			font-size: 16px
+			line-height: 44px
+			text-align: center
+			cursor: pointer
+			user-select: none
+			margin: 0 8px
+			text-decoration: none
+			background-color: #3F394F
+			color: #FFFFFF

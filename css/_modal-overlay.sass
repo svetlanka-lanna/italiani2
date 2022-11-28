@@ -1,0 +1,36 @@
+#app
+  .modal-overlay
+    position: fixed
+    display: none
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    overflow-y: scroll
+    align-items: center
+    justify-content: space-between
+    box-sizing: border-box
+    background-color: rgba(29, 29, 27, 0.5)
+    z-index: 11
+    justify-content: center
+    &__content
+      background-color: #fff
+      padding: 25px 40px
+      border-radius: 12px
+      position: relative
+      box-sizing: border-box
+      margin: auto
+      .title
+        font-weight: 600
+        font-size: 20px
+        line-height: 32px
+        color: #3F394F
+        padding-right: 40px
+        margin-bottom: 25px
+
+
+@media (max-width: 767px)
+  #app
+    .modal-overlay
+      &__content
+        padding: 20px

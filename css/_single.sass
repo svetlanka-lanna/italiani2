@@ -1,0 +1,237 @@
+#app
+	.option-button-mobile
+		display: none
+	.page-product
+		padding-bottom: 100px
+		.site-map
+			display: none
+		.product-doping
+			margin-bottom: 40px
+			> .title
+				margin-bottom: 25px
+				font-weight: 600
+				font-size: 18px
+				line-height: 28px
+				color: #3F394F
+			&__wrap
+				display: flex
+				flex-wrap: wrap
+				justify-content: space-between
+				margin-right: -15px
+				.item
+					flex: 0 0 145px
+					max-width: 145px
+					text-align: center
+					background: #FFFFFF
+					box-shadow: 0px 2px 10px rgba(28, 24, 25, 0.1)
+					border-radius: 16px
+					padding: 15px 0
+					color: #3F394F
+					cursor: pointer
+					position: relative
+					height: 192px
+					box-sizing: border-box
+					-webkit-user-select: none
+					-moz-user-select: none
+					-ms-user-select: none
+					user-select: none
+					margin-right: 15px
+					margin-bottom: 15px
+					&::after
+						content: ''
+						background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8ZM12.0303 4.96967C11.7374 4.67678 11.2626 4.67678 10.9697 4.96967C10.9626 4.97674 10.9559 4.98424 10.9498 4.9921L7.4774 9.41674L5.38388 7.32322C5.09098 7.03033 4.61611 7.03033 4.32322 7.32322C4.03032 7.61612 4.03032 8.09099 4.32322 8.38388L6.96966 11.0303C7.26256 11.3232 7.73743 11.3232 8.03032 11.0303C8.03685 11.0238 8.043 11.0169 8.04876 11.0097L12.041 6.01947C12.3232 5.72582 12.3196 5.25897 12.0303 4.96967Z' fill='%233F394F'/%3E%3C/svg%3E%0A")
+						width: 16px
+						height: 16px
+						background-size: cover
+						background-repeat: no-repeat
+						position: absolute
+						right: 10px
+						top: 10px
+						display: none
+					.qty-input
+						display: none
+					.images
+						margin-bottom: 10px
+						img
+							width: 84px
+							height: 72px
+							object-fit: cover
+					.title
+						font-weight: 400
+						font-size: 16px
+						line-height: 24px
+					.price
+						font-weight: 600
+						font-size: 18px
+						line-height: 28px
+					.weight
+						font-weight: 400
+						font-size: 14px
+						line-height: 24px
+						color: rgba(#3F394F, .6)
+					&.active
+						background-color: #ECECEE
+						&::after
+							content: ''
+							display: block
+						.price
+							display: none
+						.weight
+							display: none
+						.qty-input
+							display: flex
+							margin: auto
+							margin-top: 10px
+							input
+								background-color: transparent
+								background: transparent
+							button:disabled
+								background-color: #fff
+		.product-selects
+			margin: 40px 0
+			.title
+				margin-bottom: 15px
+				font-weight: 600
+				font-size: 18px
+				line-height: 28px
+				color: #3F394F
+		.product-top
+			.images
+				position: relative
+				img
+					vertical-align: bottom
+					border-radius: 12px
+					width: 100%
+					height: auto
+				.bonus
+					font-weight: 400
+					font-size: 16px
+					line-height: 24px
+					color: #3F394F
+					padding: 4px 8px
+					background: #FFFFFF
+					border-radius: 12px
+					position: absolute
+					bottom: 15px
+					left: 15px
+			.price
+				font-weight: 600
+				font-size: 34px
+				line-height: 56px
+				color: #3F394F
+			h1
+				font-weight: 400
+				font-size: 24px
+				line-height: 36px
+				color: #3F394F
+				margin: 0
+			p
+				font-weight: 400
+				font-size: 16px
+				line-height: 24px
+				color: #3F394F
+			.error
+				font-weight: 400
+				font-size: 16px
+				line-height: 24px
+				color: #F40103
+				max-width: 355px
+				margin-top: 12px
+			.options
+				margin-bottom: 45px
+				.title
+					font-weight: 600
+					font-size: 16px
+					line-height: 24px
+					color: #3F394F
+					margin-bottom: 8px
+				.list
+					display: flex
+					flex-wrap: wrap
+					.item
+						margin-right: 10px
+						font-weight: 400
+						font-size: 14px
+						line-height: 24px
+						color: #3F394F
+						span
+							font-size: 16px
+							display: block
+
+
+@media (max-width: 1050px)
+	#app .page-product .product-doping__wrap
+		justify-content: start
+
+@media (max-width: 450px)
+
+	#app .page-product .product-doping__wrap
+		margin-right: 0
+	#app .page-product .product-doping__wrap .item
+		flex: 0 0 49%
+		margin-right: 2%
+		max-width: 49%
+		&:nth-child(2n)
+			margin-right: 0
+	#app
+		.product-top
+			button[type=submit]
+				position: fixed
+				bottom: 25px
+				width: calc(100% - 50px)
+				left: 25px
+				box-sizing: border-box
+				padding-left: 5px
+				padding-right: 5px
+				text-align: center
+				z-index: 3
+	#app .page-product .product-top .error
+		position: fixed
+		top: 98px
+		width: 100%
+		left: 0
+		box-sizing: border-box
+		padding: 8px 25px
+		background: #F40103
+		border-radius: 0px 0px 8px 8px
+		color: #fff
+		margin-top: 0
+		max-width: 100%
+		z-index: 3
+	#app .page-product .product-top .images
+		margin-bottom: 12px
+	#app .page-product .product-selects
+		margin: 20px 0
+	#app .page-product .product-top .options
+		margin-bottom: 0
+		background: #3F394F
+		box-shadow: 0px 2px 10px rgba(28, 24, 25, 0.1)
+		padding: 15px
+		border-radius: 8px
+		position: absolute
+		right: -5px
+		top: 60px
+		width: 270px
+		display: none
+		&::after
+			content: ""
+			background-image: url("data:image/svg+xml,%3Csvg width='38' height='38' viewBox='0 0 38 38' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_d_234_8158)'%3E%3Cpath d='M18.7308 8L27.4617 26H10L18.7308 8Z' fill='%233F394F'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_d_234_8158' x='0' y='0' width='37.4619' height='38' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dy='2'/%3E%3CfeGaussianBlur stdDeviation='5'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.109804 0 0 0 0 0.0941176 0 0 0 0 0.0980392 0 0 0 0.1 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_234_8158'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow_234_8158' result='shape'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E%0A")
+			width: 38px
+			height: 38px
+			background-size: cover
+			background-repeat: no-repeat
+			position: absolute
+			top: -25px
+			right: 3px
+		.title, .list .item
+			color: #fff
+	#app .page-product .product-selects .title
+		margin-top: 10px
+	#app
+		.option-button-mobile
+			display: block
+			position: absolute
+			top: 11px
+			right: 5px
+		.product-top .block
+			position: relative

@@ -1,0 +1,123 @@
+#app
+  .site-cart
+    position: relative
+  .cart-modal
+    position: absolute
+    right: 0
+    width: 330px
+    background: #FFFFFF
+    box-shadow: 0px 2px 10px rgba(28, 24, 25, 0.1)
+    border-radius: 8px
+    padding: 15px
+    box-sizing: border-box
+    margin-top: 15px
+    display: none
+    &__empty
+      display: none
+      margin-top: -40px
+      .title
+        font-weight: 600
+        font-size: 18px
+        line-height: 28px
+        color: #3F394F
+      .text
+        font-weight: 400
+        font-size: 16px
+        line-height: 24px
+        margin: 0
+        color: #3F394F
+    &__head
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      justify-content: space-between
+      align-items: center
+      margin-bottom: 12px
+    &__close, &__clear
+      cursor: pointer
+    &__close
+      opacity: .6
+    &__clear
+      font-weight: 400
+      font-size: 13px
+      line-height: 20px
+      color: rgba(#3F394F, .6)
+    &__item
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      margin-bottom: 15px
+      padding-bottom: 15px
+      border-bottom: 1px solid rgba(#3F394F, .1)
+      &:last-child
+        padding-bottom: 0px
+        border-bottom: 0px solid rgba(#3F394F, .1)
+      .images
+        flex: 0 0 72px
+        max-width: 72px
+        margin-right: 12px
+        img
+          vertical-align: bottom
+          width: 100%
+          height: auto
+          border-radius: 12px
+      .block
+        display: -webkit-flex
+        display: -ms-flex
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        .title
+          font-weight: 400
+          font-size: 14px
+          line-height: 22px
+          color: #3F394F
+          flex: 0 0 100%
+          max-width: 100%
+        .price
+          font-weight: 600
+          font-size: 14px
+          line-height: 22px
+          color: #3F394F
+          margin-right: 10px
+    .total
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      align-items: center
+      justify-content: space-between
+      margin-bottom: 15px
+      margin-top: 10px
+      .title
+        font-weight: 400
+        font-size: 16px
+        line-height: 24px
+        color: #3F394F
+      .price
+        font-weight: 600
+        font-size: 16px
+        line-height: 24px
+        text-align: right
+        color: #3F394F
+    &__footer
+      .link-to-cart
+        display: block
+        height: 44px
+        line-height: 44px
+        text-decoration: none
+        background-color: #3F394F
+        border-radius: 12px
+        font-weight: 400
+        font-size: 16px
+        text-align: center
+        color: #FFFFFF
+        transition: all .3s ease
+        &:hover
+          background-color: lighten(#3F394F, 10%)
+    &.empty
+      .cart-modal__footer, .cart-modal__body, .cart-modal__clear
+        display: none
+      .cart-modal__empty
+        display: block
+      .cart-modal__head
+        justify-content: flex-end
